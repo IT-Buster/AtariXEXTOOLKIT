@@ -1,0 +1,28 @@
+[build-system]
+requires = ["setuptools>=69", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "atari-xex-toolkit"
+version = "0.1.0"
+description = "Toolkit for analyzing, fixing and converting Atari XL/XE XEX files."
+readme = "README.md"
+requires-python = ">=3.12"
+license = { text = "MIT" }
+authors = [
+    { name = "IT-Buster" }
+]
+
+dependencies = []
+
+[project.scripts]
+axt = "axt.cli:main"
+
+[tool.setuptools]
+package-dir = { "" = "src" }
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.pytest.ini_options]
+pythonpath = ["src"]
